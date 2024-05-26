@@ -20,15 +20,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
 
-      # - name: Configure npm to use GitHub Package Registry
-      #   run: echo "@krishpy3:registry=https://npm.pkg.github.com" > .npmrc
+      - name: Configure npm to use GitHub Package Registry
+        run: echo "@krishpy3:registry=https://npm.pkg.github.com" > .npmrc
 
-      # - name: Authenticate with GitHub Package Registry
-      #   run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+      - name: Authenticate with GitHub Package Registry
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
       
-      # - name: Print npmrc
-      #   run: cat .npmrc
+      - name: Print npmrc
+        run: cat .npmrc
 
       - name: Install dependencies
         run: npm install
