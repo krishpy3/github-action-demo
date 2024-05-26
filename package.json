@@ -1,5 +1,5 @@
 {
-  "name": "github-action-demo",
+  "name": "@krishpy3/github-action-demo",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
