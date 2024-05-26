@@ -36,6 +36,6 @@ jobs:
       - name: Generate changelog and release
         run: npm publish
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NEW_GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         # run: npx semantic-release
